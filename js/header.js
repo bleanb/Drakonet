@@ -61,6 +61,7 @@ let isScrolling = false;
 
 // Función para manejar el scroll
 window.onscroll = function () {
+    // Obtener todos los elementos
     const header = document.querySelector('header');
     const ul = document.getElementById('nav-wrapper-ul');
     const logo = document.getElementById('logo-nav');
@@ -68,9 +69,16 @@ window.onscroll = function () {
     const titulo2 = document.getElementById('text2');
     const idiomas = document.getElementById('contenedor-idiomas');
     const colorBoxes = document.querySelectorAll('.colorBox'); // Selecciona todos los colorBox
+    const headerinmain = document.getElementById('headerinmain');
 
-    if (window.scrollY > 0) {
-        // Cuando el usuario ha hecho scroll
+    // Obtener el porcentaje de desplazamiento
+    const scrollPosition = window.scrollY || window.pageYOffset;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollPercent = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+    // Si el usuario ha hecho scroll, cambiar clases de estilos
+    if (scrollPosition > 0) {
         header.classList.add('header-scrolled');
         header.classList.remove('header-original');
         ul.classList.add('ul-scrolled');
@@ -79,6 +87,7 @@ window.onscroll = function () {
         logo.classList.add('logo-header-scrolled');
         titulo.classList.add('text1-scrolled');
         titulo2.classList.add('text2-scrolled');
+        headerinmain.classList.add('conteiner-headerinmain-scrolled');
 
         // Cambiar el estilo de hover de colorBox
         colorBoxes.forEach(box => {
@@ -89,17 +98,17 @@ window.onscroll = function () {
                 this.style.background = '#1d1d1d'; // Mantiene el color al salir del hover
             };
         });
-
     } else {
-        // Cuando el usuario está en la parte superior de la página
+        // Si está en la parte superior de la página
         header.classList.add('header-original');
         header.classList.remove('header-scrolled');
+        idiomas.classList.remove('idiomas-scrolled');
         ul.classList.remove('ul-scrolled');
         logo.classList.remove('ul-scrolled');
         logo.classList.remove('logo-header-scrolled');
         titulo.classList.remove('text1-scrolled');
-        titulo2.classList.remove('text2-scrolled'); 
-        idiomas.classList.remove('idiomas-scrolled');
+        titulo2.classList.remove('text2-scrolled');
+        headerinmain.classList.remove('conteiner-headerinmain-scrolled');
 
         // Restaurar el comportamiento original de hover de colorBox
         colorBoxes.forEach(box => {
@@ -111,6 +120,11 @@ window.onscroll = function () {
             };
         });
     }
+
+    // Si el scroll ha superado el 1% de la página, agregar la clase .scrolledout
+    if (scrollPercent > 30) {
+        headerinmain.classList.add('scrolledout');
+    } else {
+        headerinmain.classList.remove('scrolledout');
+    }
 };
-
-

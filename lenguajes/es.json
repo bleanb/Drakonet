@@ -7,10 +7,17 @@
             "Activos": "Activos",
             "Blogs": "Blogs",
             "Recursos": "Recursos",
-            "Cursos": "Cursos",
+            "Cursos": "Corsos",
             "Proposito": "Proposito",
             "Contacto": "Contacto"
         },
+
+        "form": {
+            "Contacto": "Contacto",
+            "Brevedad": "Respondemos a la brevedad",
+            "FAQ": "Tienes dudas? <a href='/pages/faq.html'>Click Aqui</a>"
+        },
+
 
         "Titulo": {
             "Titulo": "Bienvenido a"

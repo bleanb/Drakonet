@@ -12,6 +12,13 @@
             "Contacto": "Contact Us"
         },
 
+        "form": {
+            "Contacto": "Contact",
+            "Brevedad": "We cotact you ASAP.",
+            "FAQ":"<a href='/pages/faq.html'>FAQ</a>"
+        },
+        
+
         "Titulo": {
             "Titulo": "Welcome to"
         }    

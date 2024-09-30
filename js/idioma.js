@@ -1,17 +1,12 @@
 const BotonIdioma = document.getElementById('boton-desplazable-flags');
 const TextToChange = document.querySelectorAll("[data-section]");
-const letra1 = document.getElementById('letra1');
-const letra2 = document.getElementById('letra2');
-const letra3 = document.getElementById('letra3');
-const inputContacto = document.getElementById('inputContacto');
-const textArea = document.getElementById('input-form2');
-const inputNewsletter = document.getElementById('inputNewsletter');
+
 
 const ChangeLenguaje = async (language) => {
     try {
         const requestJson = await fetch(`./lenguajes/${language}.json`);
         const texts = await requestJson.json();
-        
+
 
         for (const element of TextToChange) {
             const section = element.dataset.section;
@@ -41,22 +36,99 @@ BotonIdioma.onclick = function () {
 
     if (BotonIdioma.classList.contains('active')) {
         ChangeLenguaje('en');
-        letra1.innerHTML= "I";
-        letra2.innerHTML= "'";
-        letra3.innerHTML= "m";
-        inputContacto.placeholder = 'Youremail@gmail.com';
-        textArea.placeholder = 'write your message...';
-        inputNewsletter.placeholder = 'Youremail@gmail.com';
+        localStorage.setItem('selectedLanguage', 'en'); // Guarda 'en' en localStorage
+        // Array con los nuevos textos para cada elemento
+        const newTexts = [
+            "Coponent",
+            "Courses",
+            "About Us",
+            "FAQ",
+            "Contact"
+        ];
+
+        // Obtener todos los elementos con la clase 'glass'
+        const glassElements = document.querySelectorAll('.glass');
+
+        // Cambiar el atributo data-text de cada elemento usando los textos del array
+        glassElements.forEach((element, index) => {
+            if (newTexts[index]) { // Verifica que el índice exista en el array
+                element.setAttribute('data-text', newTexts[index]);
+            }
+        });
 
     } else {
-        // Call the ChangeLenguaje function with the 'es' language
         ChangeLenguaje('es');
-        letra1.innerHTML= "S";
-        letra2.innerHTML= "o";
-        letra3.innerHTML= "y";
-        inputContacto.placeholder = 'Tumail@gmail.com';
-        textArea.placeholder = 'Escribe tu mensaje...';
-        inputNewsletter.placeholder = 'Tumail@gmail.com';
+        localStorage.setItem('selectedLanguage', 'es'); // Guarda 'es' en localStorage
+        // Array con los nuevos textos para cada elemento
+        const newTexts = [
+            "Componentes",
+            "Cursos",
+            "Propósito",
+            "Preguntas Frecuentes",
+            "Contacto"
+        ];
+
+        // Obtener todos los elementos con la clase 'glass'
+        const glassElements = document.querySelectorAll('.glass');
+
+        // Cambiar el atributo data-text de cada elemento usando los textos del array
+        glassElements.forEach((element, index) => {
+            if (newTexts[index]) { // Verifica que el índice exista en el array
+                element.setAttribute('data-text', newTexts[index]);
+            }
+        });
+
+    }
+};
+
+window.onload = function () {
+    const savedLanguage = localStorage.getItem('selectedLanguage'); // Recupera el idioma de localStorage
+
+    if (savedLanguage) {
+        ChangeLenguaje(savedLanguage); // Aplica el idioma guardado
+        if (savedLanguage === 'en') {
+            BotonIdioma.classList.add('active'); // Asegura que el botón esté activo si el idioma es inglés
+            // Array con los nuevos textos para cada elemento
+            const newTexts = [
+                "Coponent",
+                "Courses",
+                "About Us",
+                "FAQ",
+                "Contact"
+            ];
+
+// Obtener todos los elementos con la clase 'glass'
+const glassElements = document.querySelectorAll('.glass');
+
+// Cambiar el atributo data-text de cada elemento usando los textos del array
+glassElements.forEach((element, index) => {
+    if (newTexts[index]) { // Verifica que el índice exista en el array
+        element.setAttribute('data-text', newTexts[index]);
+    }
+});
+
+        }
+    } else {
+        ChangeLenguaje('es'); // Idioma por defecto
+        // Array con los nuevos textos para cada elemento
+        const newTexts = [
+            "Componentes",
+            "Cursos",
+            "Propósito",
+            "Preguntas Frecuentes",
+            "Contacto"
+        ];
+
+// Obtener todos los elementos con la clase 'glass'
+const glassElements = document.querySelectorAll('.glass');
+
+// Cambiar el atributo data-text de cada elemento usando los textos del array
+glassElements.forEach((element, index) => {
+    if (newTexts[index]) { // Verifica que el índice exista en el array
+        element.setAttribute('data-text', newTexts[index]);
+    }
+});
+
     }
 };
 
