@@ -45,6 +45,17 @@ const ChangeLenguaje = async (language) => {
 BotonIdioma.onclick = function () {
     BotonIdioma.classList.toggle('active');
     location.reload();
+
+    // Función para desplazar la ventana hacia arriba
+function scrollToTop() {
+    setTimeout(() => {
+        window.scrollTo(0, 0); // Desplaza la ventana a la parte superior
+    }, 100); // Espera 100 milisegundos
+}
+
+// Ejecutar la función al cargar la página
+window.onload = scrollToTop;
+
     if (BotonIdioma.classList.contains('active')) {
         ChangeLenguaje('en');
         localStorage.setItem('selectedLanguage', 'en'); // Guarda 'en' en localStorage
