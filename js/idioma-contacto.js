@@ -59,9 +59,15 @@ window.onload = function () {
         ChangeLenguaje(savedLanguage); // Aplica el idioma guardado
         if (savedLanguage === 'en') {
             BotonIdioma.classList.add('active'); // Asegura que el botón esté activo si el idioma es inglés
+            inputContacto1.placeholder = 'Full Name';
+            inputContacto2.placeholder = 'Email';
+            inputContacto3.placeholder = 'Write your message...';
         }
     } else {
         ChangeLenguaje('es'); // Idioma por defecto
+        inputContacto1.placeholder = 'Nombre Completo';
+        inputContacto2.placeholder = 'Mail';
+        inputContacto3.placeholder = 'Escriba su mensaje...';
     }
 };
 

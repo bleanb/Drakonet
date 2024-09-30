@@ -127,4 +127,5 @@ window.onscroll = function () {
     } else {
         headerinmain.classList.remove('scrolledout');
     }
+
 };
