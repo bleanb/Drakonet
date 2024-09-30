@@ -18,6 +18,10 @@
             "FAQ": "Tienes dudas? <a href='/pages/faq.html'>Click Aqui</a>"
         },
 
+        "FAQS": {
+            "Pregunta1": "Quiero ver los codigos fuente de los videos<i class=\"material-icons right\">arrow_drop_down</i><p class=\"invisible-faqs\">Si pagas la subscripcion de 1 dolar por mes, tenes acceso a todos los repocitorios de codigo de todos los videos.</p>",
+            "Pregunta2": "Que puedo encontrar en la seccion Blog?<i class=\"material-icons right\">arrow_drop_down</i><p class=\"invisible-faqs\">Aqui encontrara articulos sobre tecnoliagias escritos por Lean Bellone</p>"
+        },
 
         "Titulo": {
             "Titulo": "Bienvenido a"

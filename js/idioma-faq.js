@@ -1,6 +1,7 @@
 const BotonIdioma = document.getElementById('boton-desplazable-flags');
 const TextToChange = document.querySelectorAll("[data-section]");
-
+const faqs = document.querySelectorAll('.glassfaq');
+let activeFaq = null;
 
 const ChangeLenguaje = async (language) => {
     try {
@@ -17,6 +18,16 @@ const ChangeLenguaje = async (language) => {
                 // Check if the value exists in the nested section of the JSON data
                 if (texts[language][section][value]) {
                     element.innerHTML = texts[language][section][value];
+                
+                    faqs.forEach(faq => {
+                        faq.addEventListener('click', () => {
+                            if (activeFaq && activeFaq == faq) {
+                                activeP.classList.add('visible-faqs');
+                                activeP.classList.remove('invisible-faqs');
+                            }
+                        });
+                    });
+
                 } else {
                     console.error(`Translation not found for section: ${section}, value: ${value}`);
                 }

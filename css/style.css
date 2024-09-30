@@ -3,6 +3,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5); /* Fondo de la pista de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb {
+    background:#1d1d1d ;
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid rgba(255, 255, 255, 0.18); /* Borde del pulgar de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:#00bfff ;
+    cursor: pointer;
+}
 
 
 :root {
@@ -988,4 +1008,19 @@ section{
     width: 100%;
     left: 0;
     border:1px solid rgba(255, 255, 255, 0.18);
+}
+
+.invisible-faqs{
+    opacity: 0;
+    z-index: -100;
+    position: absolute;
+    width: 90%;
+}
+
+.visible-faqs{
+    position: absolute;
+    opacity: 1;
+    z-index: 10;
+    width: 90%;
+    margin-top: 50px;
 }

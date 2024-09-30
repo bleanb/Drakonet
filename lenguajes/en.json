@@ -18,6 +18,10 @@
             "FAQ":"<a href='/pages/faq.html'>FAQ</a>"
         },
         
+        "FAQS": {
+            "Pregunta1": "I want to see the source codes of the videos<i class=\"material-icons right\">arrow_drop_down</i><p class=\"invisible-faqs\">If you pay the subscription of 1 dollar per month, you have access to all the code repositories of all the videos.</p>",
+            "Pregunta2": "What can I find in the Blog section?<i class=\"material-icons right\">arrow_drop_down</i><p class=\"invisible-faqs\">Here you will find articles about technoligies written by Lean Bellone.</p>"
+        },
 
         "Titulo": {
             "Titulo": "Welcome to"
