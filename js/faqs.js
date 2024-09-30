@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainfaq = document.getElementById('mainfaq');
     let activeFaq = null;
 
+
     faqs.forEach(faq => {
         faq.addEventListener('click', () => {
             if (activeFaq && activeFaq !== faq) {

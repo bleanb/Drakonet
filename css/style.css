@@ -1015,6 +1015,7 @@ section{
     z-index: -100;
     position: absolute;
     width: 90%;
+    transition: 0.5s;
 }
 
 .visible-faqs{
@@ -1023,4 +1024,5 @@ section{
     z-index: 10;
     width: 90%;
     margin-top: 50px;
+    transition: 0.5s;
 }
