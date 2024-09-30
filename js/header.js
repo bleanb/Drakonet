@@ -66,6 +66,7 @@ window.onscroll = function () {
     const logo = document.getElementById('logo-nav');
     const titulo = document.getElementById('text1');
     const titulo2 = document.getElementById('text2');
+    const idiomas = document.getElementById('contenedor-idiomas');
     const colorBoxes = document.querySelectorAll('.colorBox'); // Selecciona todos los colorBox
 
     if (window.scrollY > 0) {
@@ -74,6 +75,7 @@ window.onscroll = function () {
         header.classList.remove('header-original');
         ul.classList.add('ul-scrolled');
         logo.classList.add('ul-scrolled');
+        idiomas.classList.add('idiomas-scrolled');
         logo.classList.add('logo-header-scrolled');
         titulo.classList.add('text1-scrolled');
         titulo2.classList.add('text2-scrolled');
@@ -97,6 +99,7 @@ window.onscroll = function () {
         logo.classList.remove('logo-header-scrolled');
         titulo.classList.remove('text1-scrolled');
         titulo2.classList.remove('text2-scrolled'); 
+        idiomas.classList.remove('idiomas-scrolled');
 
         // Restaurar el comportamiento original de hover de colorBox
         colorBoxes.forEach(box => {

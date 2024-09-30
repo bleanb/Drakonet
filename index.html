@@ -23,13 +23,13 @@
     <header>
         <!-- Dropdown Structure -->
         <ul id="dropdown1" class="dropdown-content">
-            <li><a class="waves-effect" href="#">Componentes</a></li>
+            <li><a class="waves-effect" data-section="menu" data-value="Componentes"href="#">Componentes</a></li>
             <li class="divider"></li>
-            <li><a class="disabled-link">Maquetas</a></li>
+            <li><a class="disabled-link" data-section="menu" data-value="Maquetas">Maquetas</a></li>
             <li class="divider"></li>
-            <li><a class="disabled-link">Activos</a></li>
+            <li><a class="disabled-link" data-section="menu" data-value="Activos">Activos</a></li>
             <li class="divider"></li>
-            <li><a class="disabled-link">Lectura</a></li>
+            <li><a class="disabled-link" data-section="menu" data-value="Blog">Blog</a></li>
         </ul>
 
 
@@ -54,8 +54,7 @@
             <li>
                 <div class="divider"></div>
             </li>
-            <li><a href="#" class="waves-effect"><i class="material-icons left mapicon">location_on</i>Donde
-                    Encontrarnos</a></li>
+            <li><a href="#" class="waves-effect"><i class="material-icons left mapicon">location_on</i>Opcion5</a></li>
             <li>
                 <div class="divider"></div>
             </li>
@@ -64,34 +63,25 @@
         <nav>
             <div class="nav-wrapper">
                 <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large hamburguesa"><i
-                        class="material-icons">menu</i></a>
+                        class="material-icons" >menu</i></a>
                 <a id="logo-nav" href="./index.html"><img class="logo-header" src="./assets/logo.png"
                         alt="Logo de la marca"></a>
                 <ul id="nav-wrapper-ul" class="hide-on-med-and-down">
-                    <li><a class="dropdown-trigger" href="#productos" data-target="dropdown1">Recursos<i
+                    <li><a data-section="menu" data-value="Recursos" class="dropdown-trigger" href="#productos" data-target="dropdown1">Recursos<i
                                 class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a href="#"><!--<i class="material-icons left mapicon">location_on</i>-->Cursos</a>
+                    <li><a data-section="menu" data-value="Cursos" href="#"><!--<i class="material-icons left mapicon">location_on</i>-->Cursos</a>
                     </li>
-                    <li><a href="#"><!--<i class="material-icons left mapicon">location_on</i>-->Proposito</a></li>
-                    <li><a href="./pages/contacto.html"><!--<i class="material-icons left mapicon">location_on</i>-->Contacto</a>
+                    <li><a data-section="menu" data-value="Proposito" href="#"><!--<i class="material-icons left mapicon">location_on</i>-->Proposito</a></li>
+                    <li><a data-section="menu" data-value="Contacto" href="./pages/contacto.html"><!--<i class="material-icons left mapicon">location_on</i>-->Contacto</a>
                     </li>
                 </ul>
-                <!-- Switch -->
-                <div class="switch">
-                    <label>
-                        <input type="checkbox">
-                        <span class="lever"></span>
-                    </label>
+                <div id="contenedor-idiomas" class="contenedor-idiomas">
+                    <div class="flags">
+                        <div class="boton-desplazable-flags" id="boton-desplazable-flags">
+                            <i class="indicador-flags"></i>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Disabled Switch -->
-                <div class="switch">
-                    <label>
-                        <input disabled type="checkbox">
-                        <span class="lever"></span>
-                    </label>
-                </div>
-            </div>
         </nav>
     </header>
 
@@ -104,10 +94,9 @@
             <div class="backgroundAmim"></div>
         </div>
         <div class="container">
-            <span id="text1" class="text1">Bienvenidos a</span>
+            <span data-section="Titulo" data-value="Titulo" id="text1" class="text1">Bienvenidos a</span>
             <span id="text2" class="text2">DrakoNet</span>
         </div>
-        
     </main>
     
 
@@ -170,6 +159,7 @@ window.onload = scrollToTop;
 </script>
 
     <script src="./js/header.js"></script>
+    <script src="./js/idioma.js"></script>
   
 
 

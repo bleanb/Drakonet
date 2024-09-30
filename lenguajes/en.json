@@ -1,0 +1,19 @@
+{
+    "en": {
+        
+        "menu": {
+            "Componentes": "Component",
+            "Maquetas": "MockUp",
+            "Activos": "Assets",
+            "Blogs": "Blogs",
+            "Recursos": "Resources",
+            "Cursos": "Courses",
+            "Proposito": "About Us",
+            "Contacto": "Contact Us"
+        },
+
+        "Titulo": {
+            "Titulo": "Welcome to"
+        }    
+    }
+}

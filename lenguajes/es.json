@@ -1,0 +1,19 @@
+{
+    "es": {
+        
+        "menu": {
+            "Componentes": "Componentes",
+            "Maquetas": "Maquetas",
+            "Activos": "Activos",
+            "Blogs": "Blogs",
+            "Recursos": "Recursos",
+            "Cursos": "Cursos",
+            "Proposito": "Proposito",
+            "Contacto": "Contacto"
+        },
+
+        "Titulo": {
+            "Titulo": "Bienvenido a"
+        }
+    }
+}
