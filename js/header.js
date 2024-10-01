@@ -124,7 +124,7 @@ window.onscroll = function () {
     }
 
     // Si el scroll ha superado el 1% de la página, agregar la clase .scrolledout
-    if (scrollPercent > 35) {
+    if (scrollPercent > 40) {
         headerinmain.classList.add('scrolledout');
     } else {
         headerinmain.classList.remove('scrolledout');
