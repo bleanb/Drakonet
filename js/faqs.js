@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const activeP = activeFaq.querySelector('p');
                 activeP.classList.remove('visible-faqs');
                 activeP.classList.add('invisible-faqs');
-                mainfaq.style.height = '800px';
+                mainfaq.style.height = '1000px';
                 const offset = faq.offsetTop - 200; 
                 window.scrollTo({
                     top: offset,
@@ -33,13 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 activeP.classList.add('invisible-faqs');
                 activeFaq = null;
                 window.scrollTo({ top: 0, behavior: 'smooth' });
-                mainfaq.style.height = '800px';
+                mainfaq.style.height = '1000px';
 
             } else {
                 faq.style.height = '300px';
                 faq.classList.add('expanded');
                 activeFaq = faq;
-                mainfaq.style.height = '1000px';
+                mainfaq.style.height = '1200px';
                 const offset = faq.offsetTop - 200; // Ajuste de 50px hacia arriba
                 window.scrollTo({
                     top: offset,

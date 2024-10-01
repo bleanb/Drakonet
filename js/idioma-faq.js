@@ -5,7 +5,7 @@ let activeFaq = null;
 
 const ChangeLenguaje = async (language) => {
     try {
-        const requestJson = await fetch(`/lenguajes/${language}.json`);
+        const requestJson = await fetch(`../lenguajes/${language}.json`);
         const texts = await requestJson.json();
         
 
