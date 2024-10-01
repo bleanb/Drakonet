@@ -32,6 +32,20 @@
 
         "Titulo": {
             "Titulo": "Welcome to"
-        }    
+        },
+
+        "Cursos": {
+            "Titulo1": "The fastest way to <span class=\"gradient-text\">learn coding</span>",
+            "Titulo2": "BEGINNERS START HERE",
+            "Titulo3": "HTML & CSS Complete Course (+ Flexbox & Grid)",
+            "Parrafo1": "No prior coding experience required.",
+            "Parrafo2": "Learn the basics of HTML & CSS to create amazing websites",
+            "Parrafo3": "Learn responsive web design with Flexbox and CSS Grid",
+            "Parrafo4": "6h video content with coding exercises, quizzes and projects",
+            "Boton1": "Get the Course",
+            "Boton2": "Download Resources",
+            "Titulo4": "What you will learn in the course",
+            "Boton3": "Get the course"
+        }  
     }
 }

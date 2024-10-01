@@ -334,3 +334,72 @@ nav #toggle-button{
     align-items: center;
   }
 }
+
+.contenedor-idiomas{
+  display: block;
+  width: 100px;
+  height: 90px;
+  position: fixed;
+  right: 15px;
+  top: 35px;
+  transition: 0.7s;
+}
+
+.idiomas-scrolled{
+  top: 20px;
+}
+
+
+.flags
+{
+  position: relative;
+  width: 50px;
+  height: 30px;
+  margin-right: -70px;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flags .boton-desplazable-flags
+{
+  width: 50px;
+  height: 30px;
+  border-radius: 160px;
+  cursor: pointer;
+  background: #222;
+  transition: 0.5s;
+  box-shadow: inset 0px 8px 60px rgba(0, 0, 0, 0.1),
+          inset 0px 8px 8px rgba(0, 0, 0, 0.1),
+          inset 0px -8px 8px rgba(0, 0, 0, 0.1),
+          0px 15px 15px rgba(0, 0, 0, 0.3),
+          0px -15px 15px rgba(255,255,255,0.05);
+}
+
+.flags .boton-desplazable-flags .indicador-flags {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url(../assets/ES.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 50%;
+  transform: scale(0.9);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+              inset 0px 4px 4px rgba(255,255,255,0.2),
+              inset 0px -4px 4px rgba(255,255,255,0.2);
+  transition: 0.5s;
+}
+
+.flags .boton-desplazable-flags.active .indicador-flags {
+  margin-left: 20px;
+  background-image: url(../assets/EN.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

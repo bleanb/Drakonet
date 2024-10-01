@@ -30,6 +30,20 @@
 
         "Titulo": {
             "Titulo": "Bienvenido a"
+        },
+
+        "Cursos": {
+            "Titulo1": "La manera mas veloz de <span class=\"gradient-text\">aprender a programar</span>",
+            "Titulo2": "Principiantes empezar aqui",
+            "Titulo3": "HTML & CSS Curso Completo (+ Flexbox & Grid)",
+            "Parrafo1": "No requiere experiencia previa.",
+            "Parrafo2": "Aprende lo basico de HTML y CSS para hacer Webs que vendan.",
+            "Parrafo3": "Aprende a hacer Webs Responsive con flexbox y CSS Grid",
+            "Parrafo4": "6h de contenido en video de proyectos y explicaciones",
+            "Boton1": "Obtener Curso",
+            "Boton2": "Descaragar Zip",
+            "Titulo4": "Que vas a aprender en el curso",
+            "Boton3": "Obtener Curso"
         }
     }
 }

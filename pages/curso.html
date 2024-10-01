@@ -6,33 +6,39 @@
   <title>DrakoNet</title>
   <link rel="icon" type="image/png" href="../assets/7efe79b6-e630-4ced-a6f8-0bea31f70efa.jpeg">
   <link rel="stylesheet" href="../css/style_v3.css">
-  <script type="text/javascript" src="animation.js" defer></script>
+  <script type="text/javascript" src="../js/idioma-cursos.js" defer></script>
 </head>
 <body>
+  <div id="contenedor-idiomas" class="contenedor-idiomas">
+    <div class="flags">
+        <div class="boton-desplazable-flags" id="boton-desplazable-flags">
+            <i class="indicador-flags"></i>
+        </div>
+    </div>
+</div>
   <main>
-    <h1>The fastest way to <span class="gradient-text">learn coding</span></h1>
+    <h1 data-section="Cursos" data-value="Titulo1"></h1>
     <div class="container">
       <div class="thumbnail" style="--anim-speed: 1.1;">
         <img height="225px" width="400px" src="../assets/img/th-course.png" alt="HTML & CSS">
       </div>
       <div>
-        <p class="highlight">BEGINNERS START HERE</p>
-        <h3>HTML & CSS Complete Course (+ Flexbox & Grid)</h3>
+        <p class="highlight" data-section="Cursos" data-value="Titulo2">BEGINNERS START HERE</p>
+        <h3 data-section="Cursos" data-value="Titulo3"></h3>
         <ul>
-          <li>No prior coding experience required</li>
-          <li>Learn the basics of HTML & CSS to create amazing websites</li>
-          <li>Learn responsive web design with Flexbox and CSS Grid</li>
-          <li>6h video content with coding exercises, quizzes and projects</li>
+          <li data-section="Cursos" data-value="Parrafo1"></li>
+          <li data-section="Cursos" data-value="Parrafo2"></li>
+          <li data-section="Cursos" data-value="Parrafo3"></li>
+          <li data-section="Cursos" data-value="Parrafo4"></li>
         </ul>
-        <a class="cta-button" href="#">Get the Course</a>
-        <a class="standard-button" href="#" download="CourseResources.zip">Download Resources</a> 
+        <a class="cta-button" href="#" data-section="Cursos" data-value="Boton1"></a>
+        <a class="standard-button" href="#" data-section="Cursos" data-value="Boton2"></a> 
       </div>
     </div>
-    <h2>What you will learn in the course</h2>
+    <h2 data-section="Cursos" data-value="Titulo4"></h2>
     <iframe class="video-player" src="https://www.youtube.com/embed/Iy-h9EM6Ypk?si=xhHs5lCxjaQV-cnP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <a class="cta-button" href="#" target="_blank">
-        Get the course on Udemy
-    </a>
+    <a class="cta-button" href="#" target="_blank" data-section="Cursos" data-value="Boton3"></a>
+     <!--
     <div class="container hostinger">
       <div class="thumbnail">
         <img height="225" width="400" src="../assets/img/th-hostinger.png" alt="Deploy your website with hostinger">
@@ -50,6 +56,8 @@
         </div>
       </div>
     </div>   
+
+   
 
     <h2 id="source-codes">Source Code for our Projects</h2>
 
@@ -69,7 +77,7 @@
               </div>
             </div>
         </div>
-        <!--
+  
         <div class="container">
             <div class="thumbnail">
               <img height="225" width="400" src="images/thumbnails/th-socials-hover.png" alt="Create This Social Media Icons Tool Tip Hover Transition">
