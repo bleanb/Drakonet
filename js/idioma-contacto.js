@@ -7,7 +7,7 @@ const inputContacto3 = document.getElementById('input-contacto3');
 
 const ChangeLenguaje = async (language) => {
     try {
-        const requestJson = await fetch(`/lenguajes/${language}.json`);
+        const requestJson = await fetch(`../lenguajes/${language}.json`);
         const texts = await requestJson.json();
         
 
