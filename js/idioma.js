@@ -33,7 +33,7 @@ const ChangeLenguaje = async (language) => {
 
 BotonIdioma.onclick = function () {
     BotonIdioma.classList.toggle('active');
-
+    location.reload();
     if (BotonIdioma.classList.contains('active')) {
         ChangeLenguaje('en');
         localStorage.setItem('selectedLanguage', 'en'); // Guarda 'en' en localStorage

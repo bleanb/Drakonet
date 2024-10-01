@@ -61,10 +61,13 @@ main {
     width: 100%;
     height: 800px;
     margin: 0;
+    overflow: hidden;
 }
 
 footer{
     height: 300px;
+    bottom: 0;
+    margin-top: 100px;
 }
 
 /****************************************************************************/
@@ -78,6 +81,7 @@ footer{
     background-color: var(--color-dos);
     box-shadow: 0 0 1em #00bfff;
     filter: drop-shadow(2px 2px 10px #00bfff);
+    font-family: "Roboto Mono", monospace;
 }
 
 
@@ -99,6 +103,7 @@ footer{
     align-items: center;
     justify-content: center;
     margin: 0;
+    
 }
 
 
@@ -128,12 +133,12 @@ footer{
 }
 
 .pie-pagina .grupo-1 .box p {
-    color: var(--color-tres);
+    color: whitesmoke;
     margin-bottom: 10px;
 }
 
 .pie-pagina .grupo-1 .box p i{
-    color: var(--color-dos);
+    color: whitesmoke;
 }
 
 
@@ -152,7 +157,7 @@ footer{
 }
 
 .pie-pagina .grupo-1 .red-social a:hover {
-    color: var(--color-uno);
+    color: whitesmoke;
     filter: drop-shadow(2px 2px 10px #00bfff);
 }
 
@@ -162,8 +167,9 @@ footer{
     justify-content: center;
     background-color: var(--color-tres);
     padding: 15px 10px;
-    color: #0d2033;
+    color: whitesmoke;
     height: 15px;
+    font-family: 'Poppins';
 }
 
 .pie-pagina .grupo-2 small {
@@ -180,6 +186,7 @@ footer{
 
     .contenedor-datos-empreza{
         margin-top: -70px;
+        color: whitesmoke;
     }
 
     .grupo-1 .box figure{
@@ -594,10 +601,6 @@ nav{
     transition: 1s ease;
 }
 
-.scrolledin {
-    opacity: 1;
-    transition: opacity 2s ease;
-}
 
 .conteiner-headerinmain-scrolled{
     margin-top: 400px;
@@ -650,6 +653,82 @@ nav{
 .conteiner-headerinmain .glass:hover {
     filter: drop-shadow(2px 2px 10px #00bfff);
 }
+
+
+.proposito{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    z-index: -10;
+    background: transparent;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    margin-top: 500px;
+
+}
+
+.proposito-in{
+    z-index: 10;
+    transition: 0.5s;
+    margin-top: -250px;
+}
+
+.card-proposito{
+    margin: 0 auto;
+    padding: 2em;
+    width: 90%;
+    background: #1c1f2b;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    opacity: 1;
+    font-family: "Roboto Mono", monospace;
+    color: whitesmoke;
+  }
+
+  .card-proposito h3{
+    font-size: 3em;
+  }
+  .card-proposito p{
+    font-family: 'Poppins';
+    font-size: 1em;
+  }
+  
+  @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  .card-proposito::after, .card-proposito::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+  }
+
+  .card-proposito::before{
+    filter: blur(1.5rem);
+    opacity: 1;
+  }
+
+  @keyframes spin{
+    from{
+      --angle: 0deg;
+    }
+    to{
+      --angle: 360deg;
+    }
+  }
 
 
 

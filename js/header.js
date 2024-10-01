@@ -70,6 +70,8 @@ window.onscroll = function () {
     const idiomas = document.getElementById('contenedor-idiomas');
     const colorBoxes = document.querySelectorAll('.colorBox'); // Selecciona todos los colorBox
     const headerinmain = document.getElementById('headerinmain');
+    const proposito = document.getElementById('proposito');
+    
 
     // Obtener el porcentaje de desplazamiento
     const scrollPosition = window.scrollY || window.pageYOffset;
@@ -126,6 +128,12 @@ window.onscroll = function () {
         headerinmain.classList.add('scrolledout');
     } else {
         headerinmain.classList.remove('scrolledout');
+    }
+
+    if (scrollPercent > 40) {
+        proposito.classList.add('proposito-in');
+    } else {
+        proposito.classList.remove('proposito-in');
     }
 
 };
