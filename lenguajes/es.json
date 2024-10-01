@@ -15,7 +15,7 @@
         "form": {
             "Contacto": "Contacto",
             "Brevedad": "Respondemos a la brevedad",
-            "FAQ": "Tienes dudas? <a href='/pages/faq.html'>Click Aqui</a>"
+            "FAQ": "Tienes dudas? <a href='../pages/faq.html'>Click Aqui</a>"
         },
 
         "FAQS": {
