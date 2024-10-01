@@ -124,13 +124,13 @@ window.onscroll = function () {
     }
 
     // Si el scroll ha superado el 1% de la página, agregar la clase .scrolledout
-    if (scrollPercent > 30) {
+    if (scrollPercent > 35) {
         headerinmain.classList.add('scrolledout');
     } else {
         headerinmain.classList.remove('scrolledout');
     }
 
-    if (scrollPercent > 35) {
+    if (scrollPercent > 40) {
         proposito.classList.add('proposito-in');
     } else {
         proposito.classList.remove('proposito-in');
