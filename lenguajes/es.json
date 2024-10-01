@@ -23,6 +23,11 @@
             "Pregunta2": "Que puedo encontrar en la seccion Blog?<i class=\"material-icons right\">arrow_drop_down</i><p class=\"invisible-faqs\">Aqui encontrara articulos sobre tecnoliagias escritos por Lean Bellone</p>"
         },
 
+        "Proposito": {
+            "TituloProposito": "Sobre DrakoNet",
+            "ParrafoProposito": "Bienvenidos a DrakoNet, el espacio donde la creatividad y el código se encuentran. Somos una plataforma dedicada a hacer el aprendizaje de desarrollo web accesible, dinámico y, sobre todo, práctico. Aquí encontrarás todo lo que necesitas para llevar tus habilidades al siguiente nivel, desde cursos de programación web diseñados para todos los niveles hasta recursos exclusivos como imágenes, fragmentos de código listos para copiar y pegar, y tutoriales en video que te guiarán paso a paso en tus proyectos.<br>En DrakoNet, creemos que el conocimiento debe ser compartido y aplicado. Por eso, además de los cursos, hemos creado un Blog lleno de artículos escritos por mí, Lean Bellone, desarrollador web y designer, donde comparto las últimas tendencias, tips y trucos del mundo del desarrollo. También encontrarás artículos seleccionados personalmente, que considero valiosos e inspiradores para quienes están en esta apasionante travesía de la programación.<br>Tanto si estás comenzando como si ya eres un experto, DrakoNet es el lugar donde aprender nunca fue tan fácil... ni tan emocionante.<br>¡Únete a nuestra comunidad y comienza a crear hoy mismo!"
+        },
+
         "Titulo": {
             "Titulo": "Bienvenido a"
         }
