@@ -76,6 +76,122 @@ footer{
 /****************************************************************************/
 /*FOOTER*/
 
+.pie-paginacontacto {
+    width: 100%;
+    height: 300px;
+    background-color: var(--color-dos);
+    box-shadow: 0 0 1em #00bfff;
+    filter: drop-shadow(2px 2px 10px #00bfff);
+    font-family: "Roboto Mono", monospace;
+    margin-top: -100px;
+}
+
+
+.pie-paginacontacto .grupo-1 {
+    width: 100%;
+    height: 300px;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+    
+}
+
+.pie-paginacontacto .grupo-1 .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    
+}
+
+.pie-paginacontacto .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-paginacontacto .grupo-1 .box figure img {
+    width: 110px;
+    height: 110px;
+    filter: drop-shadow(2px 2px 10px #00bfff);
+}
+
+.pie-paginacontacto .grupo-1 .box h2 {
+    color: var(--color-tres);
+    margin-bottom: 25px;
+    font-size: 1em;
+}
+
+.pie-paginacontacto .grupo-1 .box p {
+    color: whitesmoke;
+    margin-bottom: 10px;
+}
+
+.pie-paginacontacto .grupo-1 .box p i{
+    color: whitesmoke;
+}
+
+
+.pie-paginacontacto .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50px;
+    color: var(--color-dos);
+    margin-right: 10px;
+    background-color: var(--color-tres);
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-paginacontacto .grupo-1 .red-social a:hover {
+    color: whitesmoke;
+    filter: drop-shadow(2px 2px 10px #00bfff);
+}
+
+.pie-paginacontacto .grupo-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-tres);
+    padding: 15px 10px;
+    color: whitesmoke;
+    height: 15px;
+    font-family: 'Poppins';
+}
+
+.pie-paginacontacto .grupo-2 small {
+    font-size: 0.7em;
+}
+
+
+
+
+@media screen and (max-width:800px) {
+    .pie-paginacontacto .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+
+    .contenedor-datos-empreza{
+        margin-top: -70px;
+        color: whitesmoke;
+    }
+
+    .grupo-1 .box figure{
+        margin-top: -50px;
+    }
+}
 
 .pie-paginafaq {
     width: 100%;
@@ -173,10 +289,6 @@ footer{
     font-size: 0.7em;
 }
 
-.ultimo-texto{
-    margin-left: 35px;
-    margin-top: -10px;
-}
 
 
 
@@ -296,7 +408,6 @@ footer{
     margin-left: 35px;
     margin-top: -10px;
 }
-
 
 
 @media screen and (max-width:800px) {
