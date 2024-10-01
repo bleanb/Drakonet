@@ -130,7 +130,7 @@ window.onscroll = function () {
         headerinmain.classList.remove('scrolledout');
     }
 
-    if (scrollPercent > 35) {
+    if (scrollPercent > 30) {
         proposito.classList.add('proposito-in');
     } else {
         proposito.classList.remove('proposito-in');
