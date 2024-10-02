@@ -69,9 +69,9 @@
                 <ul id="nav-wrapper-ul" class="hide-on-med-and-down">
                     <li><a data-section="menu" data-value="Recursos" class="dropdown-trigger" href="#productos" data-target="dropdown1">Recursos<i
                                 class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a data-section="menu" data-value="Cursos" href="#"><!--<i class="material-icons left mapicon">location_on</i>-->Cursos</a>
+                    <li><a data-section="menu" data-value="Cursos" href="../pages/curso.html"><!--<i class="material-icons left mapicon">location_on</i>-->Cursos</a>
                     </li>
-                    <li><a data-section="menu" data-value="Proposito" href="../index.html#proposito"><!--<i class="material-icons left mapicon">location_on</i>-->Proposito</a></li>
+                    <li><a id="botonproposito" data-section="menu" data-value="Proposito" href="../index.html"><!--<i class="material-icons left mapicon">location_on</i>-->Proposito</a></li>
                     <li><a data-section="menu" data-value="Contacto" href="../pages/contacto.html"><!--<i class="material-icons left mapicon">location_on</i>-->Contacto</a>
                     </li>
                 </ul>
@@ -150,7 +150,12 @@
     <!------------------------------------------------------------------------------------------------------------------------------------------->
     <!--                                            SECCION SCRIPTS                                                                            -->
     <!------------------------------------------------------------------------------------------------------------------------------------------->
-
+    <script>
+        document.getElementById('botonproposito').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = '../index.html?proposito=true';
+        });
+        </script>
     <script src="../js/header.js"></script>
     <script src="../js/idioma-faq.js"></script>
     <script src="../js/faqs.js"></script>
