@@ -27,60 +27,28 @@ body{
   background-color: var(--base-color);
   color: var(--text-color);
 }
-nav{
-  /* background-color: var(--base-color); */
-  border-bottom: 1px solid var(--secondary-color);
-  display: flex;
-  align-items: center;
-}
-nav .links-container{
-  display: flex;
-}
-nav a{
-  padding: 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: var(--text-color);
-  position: relative;
-}
-nav .logo-link{
-  margin-left: 5px;
-  margin-right: auto;
-  padding: 0 25px 0 0;
-  border-radius: 1000px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-nav .logo-link:hover{
-  background-color: var(--t-main-color);
-}
-nav a:not(.logo-link)::after{
-  content: '';
-  background-color: var(--t-main-color);
-  height: 0;
+.imgbkg{
   width: 100%;
+  height: 200%;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: 150ms ease;
+  z-index: 1;
+  opacity: 30%;
 }
-nav a:not(.logo-link)::before{
-  content: '';
-  background-color: var(--main-color);
-  height: 0;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: 150ms ease;
+
+.encima{
+  z-index: 10;
 }
-nav a:hover::after{
-  height: 100%;
-  z-index: -1;
+
+main{
+  padding: min(50px, 5%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 10;
 }
-nav a:hover::before{
-  height: 4px;
+h1{
+  text-align: center;
 }
 h2{
   text-align: center;
@@ -89,27 +57,20 @@ h2{
 h3{
   font-size: 1.5rem;
 }
+
 .gradient-text{
   background: var(--main-gradient);
   background-clip: text;
   color: transparent;
   text-shadow: 0 0 20px var(--t-main-color);
 }
-main{
-  padding: min(50px, 5%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-h1{
-  text-align: center;
-}
+
 .container{ 
   margin: 30px auto;
   width: min(1100px, 100%);
   display: flex; 
   gap: 30px; 
+  z-index: 10;
 }
 .container .thumbnail{
   height: 225px;
@@ -225,65 +186,8 @@ h1{
   width: min(1100px, 100%);
   border-radius: 4px;
 }
-.container.hostinger{
-  margin: 50px 0;
-}
-nav #sidebar-active{
-  display: none;
-}
-nav #toggle-button{
-  display: none;
-  padding: 20px;
-}
-#sidebar-active:checked ~ #overlay{
-  display: block;
-}
-#overlay{
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 9;
-}
-.links-container label{
-  display: none;
-}
-@media(max-width: 700px){
-  nav{
-    position: relative;
-  }
-  nav #toggle-button{
-    display: block;
-  }
-  nav #sidebar-active:checked ~ .links-container{
-    right: 0;
-  }
-  nav #sidebar-active:checked ~ .links-container label{
-    display: block;
-  }
-  nav .links-container{
-    flex-direction: column;
-    position: fixed;
-    background-color: var(--base-color);
-    border: 1px solid var(--t-secondary-color);
-    position: fixed;
-    height: 100vh;
-    width: 260px;
-    top: 0;
-    right: -260px;
-    z-index: 10;
-    transition: 200ms ease-in-out;
-  }
-  nav .links-container label{
-    padding: 20px;
-    cursor: pointer;
-    width: max-content;
-  }
-}
+
+
 @media(max-width: 1000px){
   .container{
     flex-direction: column;
@@ -343,6 +247,7 @@ nav #toggle-button{
   right: 15px;
   top: 35px;
   transition: 0.7s;
+  z-index: 10;
 }
 
 .idiomas-scrolled{
