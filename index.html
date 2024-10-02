@@ -72,7 +72,7 @@
                                 class="material-icons right">arrow_drop_down</i></a></li>
                     <li><a data-section="menu" data-value="Cursos" href="./pages/curso.html" target="_blank"><!--<i class="material-icons left mapicon">location_on</i>-->Cursos</a>
                     </li>
-                    <li><a data-section="menu" data-value="Proposito" href="#proposito"><!--<i class="material-icons left mapicon">location_on</i>-->Proposito</a></li>
+                    <li><a id="botonproposito" data-section="menu" data-value="Proposito"><!--<i class="material-icons left mapicon">location_on</i>-->Proposito</a></li>
                     <li><a data-section="menu" data-value="Contacto" href="./pages/contacto.html"><!--<i class="material-icons left mapicon">location_on</i>-->Contacto</a>
                     </li>
                 </ul>
@@ -161,7 +161,15 @@
             colorBox.classList.add('colorBox');
             bgAnimation.append(colorBox)
         }</script>
-
+    <script>document.getElementById('botonproposito').addEventListener('click', function() {
+        const proposito = document.getElementById('proposito');
+        proposito.classList.add('proposito-in');
+        window.scrollBy({
+            top: 150,
+            behavior: 'smooth'
+        });
+    });
+    </script>
     <script src="./js/header.js"></script>
     <script src="./js/idioma.js"></script>
 
