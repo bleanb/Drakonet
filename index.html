@@ -30,7 +30,7 @@
             <li class="disabled-link divider"></li>
             <li><a class="disabled-link" data-section="menu" data-value="Activos">Activos</a></li>
             <li class="disabled-link divider"></li>
-            <li><a class="disabled-link" data-section="menu" data-value="Blog">Blog</a></li>
+            <li><a class="disabled-link" data-section="menu" data-value="Blogs">Blog</a></li>
         </ul>
 
 
@@ -175,38 +175,80 @@
     <!------------------------------------------------------------------------------------------------------------------------------------------->
     <!--                                            SECCION SCRIPTS                                                                            -->
     <!------------------------------------------------------------------------------------------------------------------------------------------->
-    <script>const bgAnimation = document.getElementById('bgAnimation');
-        const numberOfColorBoxes = 250;
-    // Creo los divs para colocarlos en el fondo del html
 
+    <script>
+        const bgAnimation = document.getElementById('bgAnimation');
+        const numberOfColorBoxes = 250;
+    
+        // Crear los divs para colocarlos en el fondo del html
         for (let i = 0; i < numberOfColorBoxes; i++) {
             const colorBox = document.createElement('div');
             colorBox.classList.add('colorBox');
-            bgAnimation.append(colorBox)
+            bgAnimation.append(colorBox);
+            console.log(`Div ${i} creado`); // Verifica que los divs se están creando
         }
-
-// Función para aplicar el efecto hover a elementos aleatorios
-function applyRandomHoverEffect() {
-    const colorBoxes = document.querySelectorAll('.colorBox');
-    const numberOfHovers = 100; // Número de divs a los que se aplicará el efecto hover
-
-    // Eliminar la clase hoverEffect de todos los colorBox
-    colorBoxes.forEach(box => box.classList.remove('efectrand'));
-
-    // Seleccionar aleatoriamente algunos divs entre los primeros 200
-    for (let i = 0; i < numberOfHovers; i++) {
-        const randomIndex = Math.floor(Math.random() * 250); // Índice aleatorio entre 0 y 199
-        colorBoxes[randomIndex].classList.add('efectrand');
-    }
-}
-
-// Aplicar el efecto hover inicialmente
-applyRandomHoverEffect();
-
-// Cambiar los hexágonos aleatorios cada 5 segundos
-setInterval(applyRandomHoverEffect, 15000);
-
+    
+        // Función para aplicar el efecto hover a elementos aleatorios
+        function applyRandomHoverEffect() {
+            const colorBoxes = document.querySelectorAll('.colorBox');
+            const numberOfHovers = 100; // Número de divs a los que se aplicará el efecto hover
+    
+            // Eliminar la clase hoverEffect de todos los colorBox
+            colorBoxes.forEach(box => box.classList.remove('efectrand'));
+    
+            // Seleccionar aleatoriamente algunos divs entre los primeros 200
+            for (let i = 0; i < numberOfHovers; i++) {
+                const randomIndex = Math.floor(Math.random() * 250); // Índice aleatorio entre 0 y 249
+                colorBoxes[randomIndex].classList.add('efectrand');
+            }
+        }
+    
+        // Aplicar el efecto hover inicialmente
+        applyRandomHoverEffect();
+    
+        // Cambiar los hexágonos aleatorios cada 10 segundos
+        setInterval(applyRandomHoverEffect, 10000);
+    
+        // Asumiendo que cada fila tiene 20 divs según tu configuración de CSS grid
+        const row = 7;
+        const columns = [8, 9, 10, 11, 12]; // Las columnas que te interesan
+        const icons = ['fa-facebook', 'fa-instagram', 'fa-envelope', 'fa-youtube', 'fa-github']; // Los iconos correspondientes para cada columna
+    
+        columns.forEach((column, index) => {
+            // Calcular el índice del div en el NodeList
+            const divIndex = (row - 1) * 20 + (column - 1);
+            const colorBoxes = document.querySelectorAll('.colorBox');
+            
+            if (colorBoxes[divIndex]) {
+                const iconLink = document.createElement('a');
+                iconLink.href = '#';
+                iconLink.className = `fa ${icons[index]}`;
+                colorBoxes[divIndex].appendChild(iconLink);
+                console.log(`Icono ${icons[index]} añadido a div ${divIndex}`); // Verifica que los iconos se están añadiendo
+            }
+        });
+    
+        // Cambiar opacidad de los divs al hacer scroll
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const colorBoxes = document.querySelectorAll('.colorBox');
+    
+            columns.forEach((column, index) => {
+                // Calcular el índice del div en el NodeList
+                const divIndex = (row - 1) * 20 + (column - 1);
+                const box = colorBoxes[divIndex];
+                
+                if (box) {
+                    if (scrollPosition > 100) { // Puedes ajustar el valor 100 según tus necesidades
+                        box.style.opacity = '0'; // Ocultar el div
+                    } else {
+                        box.style.opacity = '1'; // Mostrar el div
+                    }
+                }
+            });
+        });
     </script>
+    
     <script>document.getElementById('botonproposito').addEventListener('click', function () {
             const proposito = document.getElementById('proposito');
             proposito.classList.add('proposito-in');
@@ -230,8 +272,6 @@ setInterval(applyRandomHoverEffect, 15000);
             }
         });
     </script>
-    <script src="./js/header.js"></script>
-    <script src="./js/idioma.js"></script>
     <script>
 document.addEventListener('DOMContentLoaded', function () {
     // Selecciona el enlace por su id
@@ -247,6 +287,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
     </script>
+        <script src="./js/header.js"></script>
+        <script src="./js/idioma.js"></script>
 
     <!------------------------------------------------------------------------------------------------------------------------------------------->
 </body>

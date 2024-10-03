@@ -711,6 +711,16 @@ nav{
     transition-duration: 0s;
 }
 
+.colorBox a {
+    font-size: 24px; /* Ajusta el tamaño según sea necesario */
+    color: #ffffff; /* Asegúrate de que el color sea visible */
+    position: absolute; /* Para posicionar los iconos dentro de los divs */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra los iconos */
+    z-index: -10 !important;
+}
+
 .efectrand{
     background: #12161d; /* Color al pasar el ratón cuando no se ha hecho scroll */
     transition: background 2s ease;
@@ -775,6 +785,7 @@ nav{
     color: transparent;
     animation: text1 3s 1, blink 5s linear infinite;
 }
+
 
 .text2 {
     font-family: "Roboto Mono", monospace;

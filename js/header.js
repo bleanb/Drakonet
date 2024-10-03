@@ -72,6 +72,7 @@ window.onscroll = function () {
     const headerinmain = document.getElementById('headerinmain');
     const proposito = document.getElementById('proposito');
     const headerOff = document.getElementById('contenedor-header-off');
+    
 
 
     // Obtener el porcentaje de desplazamiento
