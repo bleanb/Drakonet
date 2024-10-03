@@ -590,8 +590,6 @@ nav{
     right: 15px;
     top: 67px;
     transition: 0.7s;
-    transition: margin-top 0.7s ease;
-    transition: opacity 0.7s ease;
     opacity: 0;
 }
 
@@ -928,7 +926,6 @@ nav{
 .conteiner-headerinmain .glass:hover {
     filter: drop-shadow(2px 2px 10px #00bfff);
 }
-
 
 .proposito{
     width: 100%;

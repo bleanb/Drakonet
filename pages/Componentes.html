@@ -23,7 +23,7 @@
     <header>
         <!-- Dropdown Structure -->
         <ul id="dropdown1" class="dropdown-content">
-            <li><a class="waves-effect" data-section="menu" data-value="Componentes"href="./componentes.html">Componentes</a></li>
+            <li><a class="waves-effect" data-section="menu" data-value="Componentes"href="#">Componentes</a></li>
             <li class="divider"></li>
             <li><a class="disabled-link" data-section="menu" data-value="Maquetas">Maquetas</a></li>
             <li class="divider"></li>
@@ -67,7 +67,7 @@
                 <a id="logo-nav" href="../index.html"><img class="logo-header" src="../assets/logo.png"
                         alt="Logo de la marca"></a>
                 <ul id="nav-wrapper-ul" class="hide-on-med-and-down">
-                    <li><a data-section="menu" data-value="Recursos" class="dropdown-trigger" href="#productos" data-target="dropdown1">Recursos<i
+                    <li><a data-section="menu" data-value="Recursos" class="dropdown-trigger" data-target="dropdown1">Recursos<i
                                 class="material-icons right">arrow_drop_down</i></a></li>
                     <li><a data-section="menu" data-value="Cursos" href="../pages/curso.html" target="_blank"><!--<i class="material-icons left mapicon">location_on</i>-->Cursos</a>
                     </li>
@@ -98,18 +98,7 @@
                 <div class="bg-shape3 bg-coral opacty-50 bg-blur"></div>
                 <div class="bg-shape4 bg-purple opacty-50 bg-blur"></div>
                 <div class="bg-shape5 bg-turquesa opacty-50 bg-blur"></div>
-                
             </div>
-        </div>
-        <div id="contenedor-faqs" class="contenedor-faqs">  
-            <div data-section="FAQS" data-value="Pregunta1" class="glassfaq">Quiero ver los codigos fuente de los videos<i class="material-icons right">arrow_drop_down</i><p class="invisible-faqs">Si pagas la subscripcion de 1 dolar por mes, tenes acceso a todos los repocitorios de codigo de todos los videos.</p></div>
-            <div data-section="FAQS" data-value="Pregunta2" class="glassfaq">Que puedo encontrar en la seccion Blog?<i class="material-icons right">arrow_drop_down</i><p class="invisible-faqs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officiis ex possimus impedit eaque illo provident, vel nam atque, incidunt, nulla labore! Dicta unde fugit perspiciatis explicabo perferendis accusantium qui!</p></div>
-            <div class="glassfaq">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis<i class="material-icons right">arrow_drop_down</i><p class="invisible-faqs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officiis ex possimus impedit eaque illo provident, vel nam atque, incidunt, nulla labore! Dicta unde fugit perspiciatis explicabo perferendis accusantium qui!</p></div>
-            <div class="glassfaq">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis<i class="material-icons right">arrow_drop_down</i><p class="invisible-faqs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nam ex beatae eum dolores doloremque minima. Veritatis labore commodi quibusdam totam, nostrum libero aperiam corrupti dolor expedita necessitatibus, accusantium pariatur!</p></div>
-            <div class="glassfaq">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis<i class="material-icons right">arrow_drop_down</i><p class="invisible-faqs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nam ex beatae eum dolores doloremque minima. Veritatis labore commodi quibusdam totam, nostrum libero aperiam corrupti dolor expedita necessitatibus, accusantium pariatur!</p></div>
-            <div class="glassfaq">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis<i class="material-icons right">arrow_drop_down</i><p class="invisible-faqs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nam ex beatae eum dolores doloremque minima. Veritatis labore commodi quibusdam totam, nostrum libero aperiam corrupti dolor expedita necessitatibus, accusantium pariatur!</p></div>
-            <div class="glassfaq">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis<i class="material-icons right">arrow_drop_down</i><p class="invisible-faqs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nam ex beatae eum dolores doloremque minima. Veritatis labore commodi quibusdam totam, nostrum libero aperiam corrupti dolor expedita necessitatibus, accusantium pariatur!</p></div>
-            <div class="glassfaq">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis<i class="material-icons right">arrow_drop_down</i><p class="invisible-faqs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nam ex beatae eum dolores doloremque minima. Veritatis labore commodi quibusdam totam, nostrum libero aperiam corrupti dolor expedita necessitatibus, accusantium pariatur!</p></div>
         </div>
     </main>
     
@@ -156,9 +145,35 @@
             window.location.href = '../index.html?proposito=true';
         });
         </script>
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const botonIdiomas = document.getElementById('contenedor-idiomas');
+
+    // Inicialmente establece la opacidad y el margen superior
+    botonIdiomas.style.opacity = '1';
+    botonIdiomas.style.marginTop = '-33px';
+
+    // Función para manejar el scroll
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollPosition > 5) {
+            botonIdiomas.style.marginTop = '0px';
+        } else {
+            botonIdiomas.style.marginTop = '-30px'; // Ajusta este valor según tus necesidades
+        }
+    };
+
+    // Agrega el evento de scroll
+    window.addEventListener('scroll', handleScroll);
+
+    // Llama a la función una vez para establecer el estado inicial
+    handleScroll();
+});
+
+        </script>
     <script src="../js/header.js"></script>
     <script src="../js/idioma-faq.js"></script>
-    <script src="../js/faqs.js"></script>
 
 
     <!------------------------------------------------------------------------------------------------------------------------------------------->

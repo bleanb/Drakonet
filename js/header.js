@@ -101,7 +101,7 @@ window.onscroll = function () {
         if (scrollPosition === 0) {
             headerOff.style.marginTop = '-300px';
             idiomas.style.marginTop = '-300px';
-    
+            
             header.addEventListener('mouseover', handleMouseOver);
             header.addEventListener('mouseout', handleMouseOut);
         } else {

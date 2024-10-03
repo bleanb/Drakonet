@@ -24,7 +24,7 @@
     <header>
         <!-- Dropdown Structure -->
         <ul id="dropdown1" class="dropdown-content">
-            <li><a class="waves-effect" data-section="menu" data-value="Componentes" href="#">Componentes</a></li>
+            <li><a class="waves-effect" data-section="menu" data-value="Componentes" href="./pages/componentes.html">Componentes</a></li>
             <li class="disabled-link divider"></li>
             <li><a class="disabled-link" data-section="menu" data-value="Maquetas">Maquetas</a></li>
             <li class="disabled-link divider"></li>
@@ -109,7 +109,7 @@
                         class="material-icons">code</i></a></div>
             <div class="glass" style="--r:5;" data-text="Cursos"><a href="#"><i class="material-icons">book</i></a>
             </div>
-            <div class="glass" style="--r:-7;" data-text="Proposito"><a href="#proposito"><i
+            <div class="glass" style="--r:-7;" data-text="Proposito"><a id="proposito-link"><i
                         class="material-icons">info</i></a></div>
             <div class="glass" style="--r:25;" data-text="Preguntas Frecuentes"><a href="./pages/faq.html"><i
                         class="material-icons">question_answer</i></a></div>
@@ -232,6 +232,21 @@ setInterval(applyRandomHoverEffect, 15000);
     </script>
     <script src="./js/header.js"></script>
     <script src="./js/idioma.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Selecciona el enlace por su id
+    const propositoLink = document.getElementById('proposito-link');
+
+    // Agrega el evento de clic
+    propositoLink.addEventListener('click', function () {
+        // Desplaza la pantalla 100px hacia abajo
+        window.scrollBy({
+            top: 200,
+            behavior: 'smooth'
+        });
+    });
+});
+    </script>
 
     <!------------------------------------------------------------------------------------------------------------------------------------------->
 </body>
