@@ -877,6 +877,38 @@ nav{
     transition: margin-top 2s;
 }
 
+
+.dropright-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    margin-left: -5000px;
+    transition: margin-left 0.7s ease;
+}
+
+.header-main-contenedor-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: margin-left 1s, z-index 1s;
+}
+
+.scrolledleftin {
+    margin-left: 0 !important;
+}
+
+.scrolledleftout {
+    margin-left: -5000px !important;
+}
+
+
+
+
 .scrolledout {
     opacity: 0;
     transform: translateY(-500px);
