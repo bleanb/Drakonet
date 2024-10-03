@@ -94,10 +94,10 @@ window.onscroll = function () {
         // Cambiar el estilo de hover de colorBox
         colorBoxes.forEach(box => {
             box.onmouseover = function () {
-                this.style.background = '#1d1d1d'; // Cambia el color al hacer hover
+                this.style.background = '#07090c'; // Cambia el color al hacer hover
             };
             box.onmouseout = function () {
-                this.style.background = '#1d1d1d'; // Mantiene el color al salir del hover
+                this.style.background = '#07090c'; // Mantiene el color al salir del hover
             };
         });
     } else {
@@ -118,7 +118,7 @@ window.onscroll = function () {
                 this.style.background = '#00bfff'; // Cambia el color al hacer hover
             };
             box.onmouseout = function () {
-                this.style.background = '#1d1d1d'; // Mantiene el color al salir del hover
+                this.style.background = '#07090c'; // Mantiene el color al salir del hover
             };
         });
     }
