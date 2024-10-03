@@ -89,17 +89,21 @@
     <!--                                            SECCION MAIN                                                               -->
     <!--------------------------------------------------------------------------------------------------------------------------->
 
-    <main class="main-faq" id="mainfaq">
-        <div class="absolute">
-            <div class="absolute inset-0 justify-center">
-                <div class="bg-shape1 bg-teal opacty-50 bg-blur"></div>
-                <div class="bg-shape2 bg-purple opacty-50 bg-blur"></div>
-                <div class="bg-shape6 bg-purple opacty-50 bg-blur"></div>
-                <div class="bg-shape3 bg-coral opacty-50 bg-blur"></div>
-                <div class="bg-shape4 bg-purple opacty-50 bg-blur"></div>
-                <div class="bg-shape5 bg-turquesa opacty-50 bg-blur"></div>
-            </div>
-        </div>
+    <main class="main-componentes" id="maincomponentes">
+        <div class="contenedor-comp">
+            <div class="columna-comp" data-tilt>Columna 1 Fila 1 <br> (proximamente <br> componente)</div>
+            <div class="columna-comp" data-tilt>Columna 2 Fila 1 <br> (proximamente <br> componente)</div>
+            <div class="columna-comp" data-tilt>Columna 1 Fila 2 <br> (proximamente <br> componente)</div>
+            <div class="columna-comp" data-tilt>Columna 2 Fila 2 <br> (proximamente <br> componente)</div>
+            <div class="columna-comp" data-tilt>Columna 1 Fila 3 <br> (proximamente <br> componente)</div>
+            <div class="columna-comp" data-tilt>Columna 2 Fila 3 <br> (proximamente <br> componente)</div>
+            <div class="columna-comp" data-tilt>Columna 1 Fila 4 <br> (proximamente <br> componente)</div>
+            <div class="columna-comp" data-tilt>Columna 2 Fila 4 <br> (proximamente <br> componente)</div>
+            <div class="columna-comp" data-tilt>Columna 1 Fila 5 <br> (proximamente <br> componente)</div>
+            <div class="columna-comp" data-tilt>Columna 2 Fila 5 <br> (proximamente <br> componente)</div>
+            <div class="columna-comp" data-tilt>Columna 1 Fila 6 <br> (proximamente <br> componente)</div>
+            <div class="columna-comp" data-tilt>Columna 2 Fila 6 <br> (proximamente <br> componente)</div>
+        </div>        
     </main>
     
 
@@ -139,7 +143,17 @@
     <!------------------------------------------------------------------------------------------------------------------------------------------->
     <!--                                            SECCION SCRIPTS                                                                            -->
     <!------------------------------------------------------------------------------------------------------------------------------------------->
+    <script type="text/javascript" src="../js/vanilla-tilt.js"></script>
     <script>
+        VanillaTilt.init(document.querySelectorAll(".card-empleados"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+   <script>
         document.getElementById('botonproposito').addEventListener('click', function(event) {
             event.preventDefault();
             window.location.href = '../index.html?proposito=true';
@@ -174,6 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </script>
     <script src="../js/header.js"></script>
     <script src="../js/idioma-faq.js"></script>
+
 
 
     <!------------------------------------------------------------------------------------------------------------------------------------------->
