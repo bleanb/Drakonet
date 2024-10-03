@@ -907,7 +907,9 @@ nav{
 }
 
 
-
+.img-proximamente{
+    width: 100%;
+}
 
 .scrolledout {
     opacity: 0;
