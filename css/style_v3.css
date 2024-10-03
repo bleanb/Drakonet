@@ -32,7 +32,7 @@ body{
   height: 200%;
   position: absolute;
   z-index: 1;
-  opacity: 30%;
+  opacity: 100%;
 }
 
 .encima{
@@ -46,6 +46,7 @@ main{
   align-items: center;
   gap: 20px;
   z-index: 10;
+  overflow: hidden;
 }
 h1{
   text-align: center;
