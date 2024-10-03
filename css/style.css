@@ -689,7 +689,10 @@ nav{
     transition-duration: 0s;
 }
 
-
+.efectrand{
+    background: #43707f; /* Color al pasar el ratón cuando no se ha hecho scroll */
+    transition: background 2s ease;
+}
 
 .backgroundAmim{
     position: absolute;

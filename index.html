@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>DrakoNet</title>
     <meta charset="UTF-8">
@@ -173,23 +174,46 @@
     <!--                                            SECCION SCRIPTS                                                                            -->
     <!------------------------------------------------------------------------------------------------------------------------------------------->
     <script>const bgAnimation = document.getElementById('bgAnimation');
-
         const numberOfColorBoxes = 250;
+    // Creo los divs para colocarlos en el fondo del html
 
         for (let i = 0; i < numberOfColorBoxes; i++) {
             const colorBox = document.createElement('div');
             colorBox.classList.add('colorBox');
             bgAnimation.append(colorBox)
-        }</script>
+        }
+
+// Función para aplicar el efecto hover a elementos aleatorios
+function applyRandomHoverEffect() {
+    const colorBoxes = document.querySelectorAll('.colorBox');
+    const numberOfHovers = 100; // Número de divs a los que se aplicará el efecto hover
+
+    // Eliminar la clase hoverEffect de todos los colorBox
+    colorBoxes.forEach(box => box.classList.remove('efectrand'));
+
+    // Seleccionar aleatoriamente algunos divs entre los primeros 200
+    for (let i = 0; i < numberOfHovers; i++) {
+        const randomIndex = Math.floor(Math.random() * 250); // Índice aleatorio entre 0 y 199
+        colorBoxes[randomIndex].classList.add('efectrand');
+    }
+}
+
+// Aplicar el efecto hover inicialmente
+applyRandomHoverEffect();
+
+// Cambiar los hexágonos aleatorios cada 5 segundos
+setInterval(applyRandomHoverEffect, 7000);
+
+    </script>
     <script>document.getElementById('botonproposito').addEventListener('click', function () {
-        const proposito = document.getElementById('proposito');
-        proposito.classList.add('proposito-in');
-        // Desplazarse suavemente a la posición 150px desde la parte superior de la página
-        window.scrollTo({
-            top: 150,
-            behavior: 'smooth'
+            const proposito = document.getElementById('proposito');
+            proposito.classList.add('proposito-in');
+            // Desplazarse suavemente a la posición 150px desde la parte superior de la página
+            window.scrollTo({
+                top: 150,
+                behavior: 'smooth'
+            });
         });
-    });
     </script>
     <script>
         window.addEventListener('load', function () {
