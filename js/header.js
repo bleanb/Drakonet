@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.dropdown-trigger');
     var dropdownInstances = M.Dropdown.init(elems, { hover: false });
 
-    
+
     dropdownInstances.forEach(function (dropdownInstance) {
         if (dropdownInstance) {
             dropdownInstance.el.addEventListener('click', function () {
                 console.log('Dropdown clickeado');
-                
+
                 // Ajustar el dropdown cada vez que se haga clic
-                setTimeout(function() {
+                setTimeout(function () {
                     var dropdown = dropdownInstance.el.nextElementSibling; // Obtiene el dropdown correspondiente
                     if (dropdown) {
                         dropdown.style.top = '70px'; // Mover el dropdown a 50px desde la parte superior
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.sidenav');
 });
 
@@ -71,7 +71,8 @@ window.onscroll = function () {
     const colorBoxes = document.querySelectorAll('.colorBox'); // Selecciona todos los colorBox
     const headerinmain = document.getElementById('headerinmain');
     const proposito = document.getElementById('proposito');
-    
+    const headerOff = document.getElementById('contenedor-header-off');
+
 
     // Obtener el porcentaje de desplazamiento
     const scrollPosition = window.scrollY || window.pageYOffset;
@@ -80,6 +81,46 @@ window.onscroll = function () {
     const scrollPercent = (scrollPosition / (documentHeight - windowHeight)) * 100;
 
     // Si el usuario ha hecho scroll, cambiar clases de estilos
+
+    function handleMouseOver() {
+        headerOff.style.marginTop = '-35px';
+        headerOff.style.opacity = '1';
+        idiomas.style.marginTop = '-15px';
+        idiomas.style.opacity = '1';
+    }
+    
+    function handleMouseOut() {
+        headerOff.style.marginTop = '-300px';
+        idiomas.style.marginTop = '-300px';
+        idiomas.style.opacity = '1';
+    }
+    
+    function checkScrollPosition() {
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    
+        if (scrollPosition === 0) {
+            headerOff.style.marginTop = '-300px';
+            idiomas.style.marginTop = '-300px';
+    
+            header.addEventListener('mouseover', handleMouseOver);
+            header.addEventListener('mouseout', handleMouseOut);
+        } else {
+            headerOff.style.marginTop = '-35px';
+            idiomas.style.marginTop = '0px';
+            headerOff.style.opacity = '1';
+            idiomas.style.opacity = '1';
+    
+            header.removeEventListener('mouseover', handleMouseOver);
+            header.removeEventListener('mouseout', handleMouseOut);
+        }
+    }
+    
+    // Verificar la posición del scroll al cargar la página
+    window.addEventListener('load', checkScrollPosition);
+    
+    // Verificar la posición del scroll cada vez que se desplaza la página
+    window.addEventListener('scroll', checkScrollPosition);
+
     if (scrollPosition > 5) {
         header.classList.add('header-scrolled');
         header.classList.remove('header-original');
@@ -135,5 +176,5 @@ window.onscroll = function () {
     } else {
         proposito.classList.remove('proposito-in');
     }
-    
+
 };

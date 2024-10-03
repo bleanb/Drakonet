@@ -477,6 +477,20 @@ nav{
 }
 
 
+.contenedor-header-off{
+    opacity: 0;
+    transition: 0.7s ease;
+}
+.contenedor-header-off:hover{
+    opacity: 1;
+}
+
+.contenedor-header-off:hover .contenedor-idiomas{
+    opacity: 1;
+}
+
+
+
 .nav-wrapper{
     background: transparent;
     height: 100px !important;
@@ -574,9 +588,19 @@ nav{
     height: 90px;
     position: fixed;
     right: 15px;
-    top: 35px;
+    top: 67px;
     transition: 0.7s;
+    transition: margin-top 0.7s ease;
+    transition: opacity 0.7s ease;
+    opacity: 0;
 }
+
+.contenedor-idiomas:hover{
+    opacity: 1;
+}
+
+
+
 
 .idiomas-scrolled{
     top: 20px;

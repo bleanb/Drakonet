@@ -67,23 +67,25 @@
                         class="material-icons">menu</i></a>
                 <a id="logo-nav" href="./index.html"><img class="logo-header" src="./assets/logo.png"
                         alt="Logo de la marca"></a>
-                <ul id="nav-wrapper-ul" class="hide-on-med-and-down">
-                    <li><a data-section="menu" data-value="Recursos" class="dropdown-trigger" href="#productos"
+                <div id="contenedor-header-off" class="contenedor-header-off">        
+                    <ul id="nav-wrapper-ul" class="hide-on-med-and-down">
+                        <li><a data-section="menu" data-value="Recursos" class="dropdown-trigger" href="#productos"
                             data-target="dropdown1">Recursos<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a data-section="menu" data-value="Cursos" href="./pages/curso.html"
+                        <li><a data-section="menu" data-value="Cursos" href="./pages/curso.html"
                             target="_blank"><!--<i class="material-icons left mapicon">location_on</i>-->Cursos</a>
-                    </li>
-                    <li><a id="botonproposito" data-section="menu"
+                        </li>
+                        <li><a id="botonproposito" data-section="menu"
                             data-value="Proposito"><!--<i class="material-icons left mapicon">location_on</i>-->Proposito</a>
-                    </li>
-                    <li><a data-section="menu" data-value="Contacto"
+                        </li>
+                        <li><a data-section="menu" data-value="Contacto"
                             href="./pages/contacto.html"><!--<i class="material-icons left mapicon">location_on</i>-->Contacto</a>
-                    </li>
-                </ul>
-                <div id="contenedor-idiomas" class="contenedor-idiomas">
-                    <div class="flags">
-                        <div class="boton-desplazable-flags" id="boton-desplazable-flags">
-                            <i class="indicador-flags"></i>
+                        </li>
+                    </ul>
+                    <div id="contenedor-idiomas" class="contenedor-idiomas">
+                        <div class="flags">
+                            <div class="boton-desplazable-flags" id="boton-desplazable-flags">
+                                <i class="indicador-flags"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -210,7 +212,7 @@ setInterval(applyRandomHoverEffect, 15000);
             proposito.classList.add('proposito-in');
             // Desplazarse suavemente a la posición 150px desde la parte superior de la página
             window.scrollTo({
-                top: 200,
+                top: 250,
                 behavior: 'smooth'
             });
         });
@@ -222,7 +224,7 @@ setInterval(applyRandomHoverEffect, 15000);
                 const proposito = document.getElementById('proposito');
                 proposito.classList.add('proposito-in');
                 window.scrollTo({
-                    top: 200,
+                    top: 250,
                     behavior: 'smooth'
                 });
             }
