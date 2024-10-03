@@ -231,19 +231,28 @@
     
         // Función para simular el efecto de parpadeo
         function blinkIcon(iconLink) {
-            let blinkCount = 0;
+    let blinkCount = 0;
+    const retard = 2800;
+
+    // Retardo de 2.8 segundos antes de evaluar el estado del scroll y hacer el parpadeo
+    setTimeout(() => {
+        // Verificar la posición del scroll una vez después de los 2.8 segundos
+        const scrollPosition = window.scrollY;
+        if (scrollPosition === 0) {  // Solo si el scroll está en la parte superior
             const blinkInterval = setInterval(() => {
                 iconLink.style.opacity = iconLink.style.opacity === '0' ? '1' : '0';
                 blinkCount++;
-    
+
                 // Detener el parpadeo después de 5 veces
                 if (blinkCount >= 5) {
                     clearInterval(blinkInterval);
                     iconLink.style.opacity = '1'; // Asegurarse de que quede encendido
                 }
-            }, 100); // Cambia cada 500 ms
+            }, 100); // Cambia cada 100 ms
         }
-    
+    }, retard); // Retardo de 2800 ms
+}
+
         // Cambiar opacidad de los links dentro de los divs al hacer scroll
         window.addEventListener('scroll', () => {
             const scrollPosition = window.scrollY;
@@ -260,9 +269,7 @@
                         iconLink.style.opacity = '0'; // Ocultar el link inmediatamente
                     } else {
                         // Retrasar la aparición del link
-                        setTimeout(() => {
                             blinkIcon(iconLink); // Llamar a la función de parpadeo
-                        }, 2800); // 2800 ms = 2.8 segundos
                     }
                 }
             });
@@ -292,9 +299,7 @@
                         iconLink.style.opacity = '0'; // Ocultar el link inmediatamente
                     } else {
                         // Retrasar la aparición del link
-                        setTimeout(() => {
                             blinkIcon(iconLink); // Llamar a la función de parpadeo
-                        }, 2800); // 2800 ms = 2.8 segundos
                     }
                 }
             });
