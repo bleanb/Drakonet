@@ -211,24 +211,40 @@
     
         // Asumiendo que cada fila tiene 20 divs según tu configuración de CSS grid
         const row = 7;
-        const columns = [8, 9, 10, 11, 12]; // Las columnas que te interesan
-        const icons = ['fa-facebook', 'fa-instagram', 'fa-envelope', 'fa-youtube', 'fa-github']; // Los iconos correspondientes para cada columna
+        const columns = [8, 9, 10, 11, 12, 13]; // Las columnas que te interesan
+        const icons = ['fa-facebook', 'fa-instagram', 'fa-envelope', 'fa-youtube', 'fa-github', 'fa-linkedin']; // Los iconos correspondientes para cada columna
     
         columns.forEach((column, index) => {
             // Calcular el índice del div en el NodeList
             const divIndex = (row - 1) * 20 + (column - 1);
             const colorBoxes = document.querySelectorAll('.colorBox');
-            
+    
             if (colorBoxes[divIndex]) {
                 const iconLink = document.createElement('a');
                 iconLink.href = '#';
                 iconLink.className = `fa ${icons[index]}`;
+                iconLink.style.opacity = '0'; // Inicialmente oculto
                 colorBoxes[divIndex].appendChild(iconLink);
                 console.log(`Icono ${icons[index]} añadido a div ${divIndex}`); // Verifica que los iconos se están añadiendo
             }
         });
     
-        // Cambiar opacidad de los divs al hacer scroll
+        // Función para simular el efecto de parpadeo
+        function blinkIcon(iconLink) {
+            let blinkCount = 0;
+            const blinkInterval = setInterval(() => {
+                iconLink.style.opacity = iconLink.style.opacity === '0' ? '1' : '0';
+                blinkCount++;
+    
+                // Detener el parpadeo después de 5 veces
+                if (blinkCount >= 5) {
+                    clearInterval(blinkInterval);
+                    iconLink.style.opacity = '1'; // Asegurarse de que quede encendido
+                }
+            }, 100); // Cambia cada 500 ms
+        }
+    
+        // Cambiar opacidad de los links dentro de los divs al hacer scroll
         window.addEventListener('scroll', () => {
             const scrollPosition = window.scrollY;
             const colorBoxes = document.querySelectorAll('.colorBox');
@@ -237,29 +253,21 @@
                 // Calcular el índice del div en el NodeList
                 const divIndex = (row - 1) * 20 + (column - 1);
                 const box = colorBoxes[divIndex];
-                
-                if (box) {
-                    if (scrollPosition > 100) { // Puedes ajustar el valor 100 según tus necesidades
-                        box.style.opacity = '0'; // Ocultar el div
+                const iconLink = box.querySelector('a'); // Selecciona el link dentro del div
+    
+                if (iconLink) {
+                    if (scrollPosition > 1) { // Ajusta el valor según tus necesidades
+                        iconLink.style.opacity = '0'; // Ocultar el link inmediatamente
                     } else {
-                        box.style.opacity = '1'; // Mostrar el div
+                        // Retrasar la aparición del link
+                        setTimeout(() => {
+                            blinkIcon(iconLink); // Llamar a la función de parpadeo
+                        }, 2800); // 2800 ms = 2.8 segundos
                     }
                 }
             });
         });
-    </script>
-    
-    <script>document.getElementById('botonproposito').addEventListener('click', function () {
-            const proposito = document.getElementById('proposito');
-            proposito.classList.add('proposito-in');
-            // Desplazarse suavemente a la posición 150px desde la parte superior de la página
-            window.scrollTo({
-                top: 250,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-    <script>
+
         window.addEventListener('load', function () {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('proposito') === 'true') {
@@ -270,6 +278,40 @@
                     behavior: 'smooth'
                 });
             }
+            const scrollPosition = window.scrollY;
+            const colorBoxes = document.querySelectorAll('.colorBox');
+    
+            columns.forEach((column, index) => {
+                // Calcular el índice del div en el NodeList
+                const divIndex = (row - 1) * 20 + (column - 1);
+                const box = colorBoxes[divIndex];
+                const iconLink = box.querySelector('a'); // Selecciona el link dentro del div
+    
+                if (iconLink) {
+                    if (scrollPosition > 1) { // Ajusta el valor según tus necesidades
+                        iconLink.style.opacity = '0'; // Ocultar el link inmediatamente
+                    } else {
+                        // Retrasar la aparición del link
+                        setTimeout(() => {
+                            blinkIcon(iconLink); // Llamar a la función de parpadeo
+                        }, 2800); // 2800 ms = 2.8 segundos
+                    }
+                }
+            });
+        });
+    </script>
+    
+    
+    
+    
+    <script>document.getElementById('botonproposito').addEventListener('click', function () {
+            const proposito = document.getElementById('proposito');
+            proposito.classList.add('proposito-in');
+            // Desplazarse suavemente a la posición 150px desde la parte superior de la página
+            window.scrollTo({
+                top: 250,
+                behavior: 'smooth'
+            });
         });
     </script>
     <script>
