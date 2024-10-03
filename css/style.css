@@ -682,7 +682,7 @@ nav{
     display: grid;
     grid-template-columns: repeat(20,1fr);
     grid-template-rows: repeat(10,1fr);
-    background: #07090c;
+    background: rgb(0, 11, 25)!important;
     filter: saturate(2);
     overflow: hidden;
 }
