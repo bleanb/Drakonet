@@ -1291,6 +1291,7 @@ section{
      letter-spacing: 1px;
      color: #fff;
      box-shadow: 0 5px 15px rgb(0,0,0,0.05);
+     cursor: pointer;
  }
 
  .form2 .inputBx textarea{
@@ -1499,7 +1500,7 @@ section{
 }
 
 .container-comp-rigth h3{
-    font-size: 2em;
+    font-size: 1.8em;
 }
 .container-comp-rigth p{
     font-size: 0.9em;
@@ -1512,7 +1513,7 @@ section{
 }
 
 .cta-button{
-    font-size: 0.8em;
+    font-size: 0.7em;
     display: inline-block;
     background-color: rgb(23, 30, 38);
     text-decoration: none;
