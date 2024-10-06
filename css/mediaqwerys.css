@@ -41,6 +41,10 @@
         margin-top: 15px!important;
     }
 
+    .material-icons{
+        font-size: 28px!important;
+    }
+
     .contenedor-idiomas{
         opacity: 0;
         z-index: -100!important;
