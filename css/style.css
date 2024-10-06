@@ -452,6 +452,7 @@ footer{
 }
 
 nav{
+    width: 100%;
     background: transparent!important;
     box-shadow: 0px 0px 0px !important;
 }
@@ -466,6 +467,7 @@ nav{
 
 
 .header-original {
+    width: 50%;
     height: 100px;
     box-shadow: none;
     backdrop-filter: none;
@@ -494,6 +496,7 @@ nav{
 .nav-wrapper{
     background: transparent;
     height: 100px !important;
+    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -579,6 +582,14 @@ nav{
     top: 10%!important;
 }
 
+
+.contenedor-idiomas2{
+    display: block;
+    width: 100px;
+    height: 90px;
+    margin-top: 30px;
+    margin-left: 65px;
+}
 
 
 
@@ -1483,13 +1494,47 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
-.container-comp-left img{
+
+
+.container-comp-left  img{
     position: relative;
-    width: 90%;
+    width: 95%;
+    margin-right: -25px;
 }
 
+.triangulo{
+    width: 50%;
+    height: 50%;
+    background: #181717;
+    position: absolute;
+    top: -85px;
+    left: -105px;
+    transform: rotate(45deg);
+}
+
+.icono-github {
+    color: white; 
+    font-size: 30px; 
+    margin: 5px; 
+    text-decoration: none;
+    bottom: 45px;
+    right: 5px;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+
+.triangulo:hover  {
+    filter: drop-shadow(2px 2px 10px #00bfff);
+}
+
+.triangulo:hover .icono-github {
+    filter: drop-shadow(2px 2px 10px #00bfff);
+    color: #00bfff;
+}
 
 .container-comp-rigth{
     width: 50%;

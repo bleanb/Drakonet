@@ -39,7 +39,12 @@ BotonIdioma.onclick = function () {
         localStorage.setItem('selectedLanguage', 'en'); // Guarda 'en' en localStorage
         // Array con los nuevos textos para cada elemento
         const newTexts = [
+            "Back",
             "Coponent",
+            "Mockups",
+            "Assets",
+            "Blogs",
+            "Resourses",
             "Courses",
             "About Us",
             "FAQ",
@@ -53,7 +58,9 @@ BotonIdioma.onclick = function () {
         glassElements.forEach((element, index) => {
             if (newTexts[index]) { // Verifica que el índice exista en el array
                 element.setAttribute('data-text', newTexts[index]);
+                console.log(newTexts,element);
             }
+
         });
 
     } else {
@@ -61,7 +68,12 @@ BotonIdioma.onclick = function () {
         localStorage.setItem('selectedLanguage', 'es'); // Guarda 'es' en localStorage
         // Array con los nuevos textos para cada elemento
         const newTexts = [
+            "Atras",
             "Componentes",
+            "Plantillas",
+            "Activos",
+            "Blogs",
+            "Recursos",
             "Cursos",
             "Propósito",
             "Preguntas Frecuentes",
@@ -90,12 +102,18 @@ window.onload = function () {
             BotonIdioma.classList.add('active'); // Asegura que el botón esté activo si el idioma es inglés
             // Array con los nuevos textos para cada elemento
             const newTexts = [
+                "Back",
                 "Coponent",
+                "Mockups",
+                "Assets",
+                "Blogs",
+                "Resourses",
                 "Courses",
                 "About Us",
                 "FAQ",
                 "Contact"
             ];
+    
 
 // Obtener todos los elementos con la clase 'glass'
 const glassElements = document.querySelectorAll('.glass');
@@ -112,7 +130,12 @@ glassElements.forEach((element, index) => {
         ChangeLenguaje('es'); // Idioma por defecto
         // Array con los nuevos textos para cada elemento
         const newTexts = [
+            "Atras",
             "Componentes",
+            "Plantillas",
+            "Activos",
+            "Blogs",
+            "Recursos",
             "Cursos",
             "Propósito",
             "Preguntas Frecuentes",

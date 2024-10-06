@@ -61,6 +61,9 @@ let isScrolling = false;
 
 // Función para manejar el scroll
 window.onscroll = function () {
+
+    if (window.innerWidth > 1024) {
+
     // Obtener todos los elementos
     const header = document.querySelector('header');
     const ul = document.getElementById('nav-wrapper-ul');
@@ -99,12 +102,13 @@ window.onscroll = function () {
     function checkScrollPosition() {
         const scrollPosition = window.scrollY || document.documentElement.scrollTop;
     
-        if (scrollPosition === 0) {
-            headerOff.style.marginTop = '-300px';
-            idiomas.style.marginTop = '-300px';
+        if (window.innerWidth > 1024) {
+            if (scrollPosition === 0) {
+                headerOff.style.marginTop = '-300px';
+                idiomas.style.marginTop = '-300px';
             
-            header.addEventListener('mouseover', handleMouseOver);
-            header.addEventListener('mouseout', handleMouseOut);
+                header.addEventListener('mouseover', handleMouseOver);
+                header.addEventListener('mouseout', handleMouseOut);
         } else {
             headerOff.style.marginTop = '-35px';
             idiomas.style.marginTop = '0px';
@@ -113,6 +117,7 @@ window.onscroll = function () {
     
             header.removeEventListener('mouseover', handleMouseOver);
             header.removeEventListener('mouseout', handleMouseOut);
+        }
         }
     }
     
@@ -165,17 +170,24 @@ window.onscroll = function () {
         });
     }
 
-    // Si el scroll ha superado el 1% de la página, agregar la clase .scrolledout
-    if (scrollPercent > 55) {
-        headerinmain.classList.add('scrolledout');
-    } else {
-        headerinmain.classList.remove('scrolledout');
+    if (window.innerWidth > 1024) {
+
+        if (scrollPercent > 55) {
+            headerinmain.classList.add('scrolledout');
+        } else {
+            headerinmain.classList.remove('scrolledout');
+        }
+    
+        if (scrollPercent > 55) {
+            proposito.classList.add('proposito-in');
+        } else {
+            proposito.classList.remove('proposito-in');
+        }
     }
 
-    if (scrollPercent > 55) {
-        proposito.classList.add('proposito-in');
-    } else {
-        proposito.classList.remove('proposito-in');
-    }
+}
+
 
 };
+
+
