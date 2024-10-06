@@ -35,7 +35,7 @@
 
 
         <ul id="slide-out" class="sidenav">
-            <li><img class="logo-header2" src="./assets/logo.png" alt="Logo de la marca"></li>
+            <li class="contenedor-logo-header-responsive" ><a href="#"><img class="logo-header2" src="./assets/logo.png" alt="Logo de la marca"></a></li>
             <li>
                 <div class="divider"></div>
             </li>
@@ -260,14 +260,7 @@
         // Función para simular el efecto de parpadeo
 function blinkIcon(iconLink) {
     let blinkCount = 0;
-    let retard;  // Declarar retard fuera del if-else
-
-    // Determinar el retardo según el ancho de la ventana
-    if (window.innerWidth <= 1024) {
-        retard = 800;
-    } else {
-        retard = 2800;
-    }
+    const retard = 2800; // Declarar retard fuera del if-else
 
     // Retardo antes de evaluar el estado del scroll y hacer el parpadeo
     setTimeout(() => {
@@ -286,8 +279,10 @@ function blinkIcon(iconLink) {
             }, 100); // Cambia cada 100 ms
         }
     }, retard); // Usar el retardo calculado
+
 }
     
+
         // Cambiar opacidad de los links dentro de los divs al hacer scroll
         window.addEventListener('scroll', () => {
             const scrollPosition = window.scrollY;
@@ -301,10 +296,14 @@ function blinkIcon(iconLink) {
     
                 if (iconLink) {
                     if (scrollPosition > 1) { // Ajusta el valor según tus necesidades
+                        if (window.innerWidth > 1024) {
                         iconLink.style.opacity = '0'; // Ocultar el link inmediatamente
+                                                        }
                     } else {
+                        if (window.innerWidth > 1024) {
                         // Retrasar la aparición del link
                         blinkIcon(iconLink); // Llamar a la función de parpadeo
+                        }
                     }
                 }
             });
@@ -365,7 +364,7 @@ function blinkIcon(iconLink) {
             // Desplazarse suavemente a la posición 150px desde la parte superior de la página
             if (window.innerWidth <= 1024) {
                 window.scrollTo({
-                    top: 550,
+                    top: 500,
                     behavior: 'smooth'
                 });
             }else{  

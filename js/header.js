@@ -62,7 +62,7 @@ let isScrolling = false;
 // Función para manejar el scroll
 window.onscroll = function () {
 
-    if (window.innerWidth > 1024) {
+    
 
     // Obtener todos los elementos
     const header = document.querySelector('header');
@@ -77,7 +77,6 @@ window.onscroll = function () {
     const headerOff = document.getElementById('contenedor-header-off');
     
 
-
     // Obtener el porcentaje de desplazamiento
     const scrollPosition = window.scrollY || window.pageYOffset;
     const windowHeight = window.innerHeight;
@@ -85,7 +84,7 @@ window.onscroll = function () {
     const scrollPercent = (scrollPosition / (documentHeight - windowHeight)) * 100;
 
     // Si el usuario ha hecho scroll, cambiar clases de estilos
-
+    if (window.innerWidth > 1024) {
     function handleMouseOver() {
         headerOff.style.marginTop = '-35px';
         headerOff.style.opacity = '1';
@@ -183,6 +182,16 @@ window.onscroll = function () {
         } else {
             proposito.classList.remove('proposito-in');
         }
+    }
+    else{
+        if (scrollPosition > 5) {
+            titulo.classList.add('text1-scrolled');
+            titulo2.classList.add('text2-scrolled');
+                                }
+        else{
+            titulo.classList.remove('text1-scrolled');
+            titulo2.classList.remove('text2-scrolled');
+        }                          
     }
 
 }
